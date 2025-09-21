@@ -1570,8 +1570,8 @@ body {
   top: 8%;
   left: 60%;
 
-  height: 11vmin;
-  width: 11vmin;
+  height: 10vmin;
+  width: 10vmin;
   -webkit-animation: love-burst 3s infinite 0s;
   animation: love-burst 3s infinite 0s;
   box-shadow: inset 0 0 0 5.5vmin transparent;
@@ -1583,8 +1583,8 @@ body {
 .bubble:nth-child(2) {
   top: 83%;
   left: 14%;
-  height: 20vmin;
-  width: 20vmin;
+  height: 17vmin;
+  width: 17vmin;
   -webkit-animation: love-burst 3s infinite 0.15s;
   animation: love-burst 3s infinite 0.15s;
   box-shadow: inset 0 0 0 10vmin transparent;
@@ -1622,8 +1622,8 @@ body {
 .bubble:nth-child(5) {
   top: 7%;
   left: 56%;
-  height: 18vmin;
-  width: 18vmin;
+  height: 14vmin;
+  width: 14vmin;
   -webkit-animation: love-burst 3s infinite 0.6s;
   animation: love-burst 3s infinite 0.6s;
   box-shadow: inset 0 0 0 9vmin transparent;
@@ -1661,8 +1661,8 @@ body {
 .bubble:nth-child(8) {
   top: 61%;
   left: 51%;
-  height: 11vmin;
-  width: 11vmin;
+  height: 9vmin;
+  width: 9vmin;
   -webkit-animation: love-burst 3s infinite 1.05s;
   animation: love-burst 3s infinite 1.05s;
   box-shadow: inset 0 0 0 5.5vmin transparent;
@@ -1674,8 +1674,8 @@ body {
 .bubble:nth-child(9) {
   top: 24%;
   left: 45%;
-  height: 11vmin;
-  width: 11vmin;
+  height: 9vmin;
+  width: 9vmin;
   -webkit-animation: love-burst 3s infinite 1.2s;
   animation: love-burst 3s infinite 1.2s;
   box-shadow: inset 0 0 0 5.5vmin transparent;
@@ -1687,8 +1687,8 @@ body {
 .bubble:nth-child(10) {
   top: 13%;
   left: 10%;
-  height: 19vmin;
-  width: 19vmin;
+  height: 15vmin;
+  width: 15vmin;
   -webkit-animation: love-burst 3s infinite 1.35s;
   animation: love-burst 3s infinite 1.35s;
   box-shadow: inset 0 0 0 9.5vmin transparent;
@@ -1700,8 +1700,8 @@ body {
 .bubble:nth-child(11) {
   top: 76%;
   left: 7%;
-  height: 14vmin;
-  width: 14vmin;
+  height: 11vmin;
+  width: 11vmin;
   -webkit-animation: love-burst 3s infinite 1.5s;
   animation: love-burst 3s infinite 1.5s;
   box-shadow: inset 0 0 0 7vmin transparent;
@@ -1713,8 +1713,8 @@ body {
 .bubble:nth-child(12) {
   top: 22%;
   left: 8%;
-  height: 17vmin;
-  width: 17vmin;
+  height: 13vmin;
+  width: 13vmin;
   -webkit-animation: love-burst 3s infinite 1.65s;
   animation: love-burst 3s infinite 1.65s;
   box-shadow: inset 0 0 0 8.5vmin transparent;
@@ -1726,8 +1726,8 @@ body {
 .bubble:nth-child(13) {
   top: 23%;
   left: 81%;
-  height: 16vmin;
-  width: 16vmin;
+  height: 12vmin;
+  width: 12vmin;
   -webkit-animation: love-burst 3s infinite 1.8s;
   animation: love-burst 3s infinite 1.8s;
   box-shadow: inset 0 0 0 8vmin transparent;
@@ -1791,8 +1791,8 @@ body {
 .bubble:nth-child(18) {
   top: 11%;
   left: 83%;
-  height: 18vmin;
-  width: 18vmin;
+  height: 14vmin;
+  width: 14vmin;
   -webkit-animation: love-burst 3s infinite 2.55s;
   animation: love-burst 3s infinite 2.55s;
   box-shadow: inset 0 0 0 9vmin transparent;
@@ -1817,8 +1817,8 @@ body {
 .bubble:nth-child(20) {
   top: 39%;
   left: 24%;
-  height: 19vmin;
-  width: 19vmin;
+  height: 15vmin;
+  width: 15vmin;
   -webkit-animation: love-burst 3s infinite 2.85s;
   animation: love-burst 3s infinite 2.85s;
   box-shadow: inset 0 0 0 9.5vmin transparent;
@@ -1828,23 +1828,20 @@ body {
   transform-origin: center bottom;
 }
 
-@-webkit-keyframes love-burst {
-  50%,
+@keyframes love-burst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(0) scale(0);
+  }
+  10% {
+    opacity: 1;
+  }
   100% {
-    box-shadow: inset 0 0 0 0 rgb(1, 175, 73);
-    -webkit-transform: translate(0, 0) scale(1);
-    transform: translate(0, 0) scale(1);
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(-80vmin) scale(1);
   }
 }
 
-@keyframes love-burst {
-  50%,
-  100% {
-    box-shadow: inset 0 0 0 0 rgb(18, 226, 129);
-    -webkit-transform: translate(0, 0) scale(1);
-    transform: translate(0, 0) scale(1);
-  }
-}
 .heart {
   fill: transparent;
   opacity: 0;
@@ -1982,4 +1979,83 @@ body {
     fill: rgb(253, 93, 19);
     opacity: 1;
   }
+}
+.letter-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+.letter-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.letter-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Estilos para el mensaje emergente */
+.message-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.message-box {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-box h2 {
+  color: #e6f331;
+  margin-bottom: 10px;
+  font-size: 24px;
+  -webkit-text-stroke: 0.1.5px rgb(39, 38, 12);
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+.message-box p {
+  color: #333;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.close-button {
+  background-color: #e6f331;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+.close-button:hover {
+  background-color: #d4e029;
 }
